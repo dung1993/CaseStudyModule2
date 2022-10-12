@@ -1,4 +1,4 @@
-package src.CaseModule2;
+package src.RawInfo;
 
 public class Product {
     private int idProduct;
