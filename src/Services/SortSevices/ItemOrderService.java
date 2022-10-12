@@ -21,17 +21,34 @@ public class ItemOrderService implements SuperListOrderService{
     }
 
     @Override
-    public void addListOrder(ListOrder listOrder) {
-
+    public void addListOrder(ListOrder newListOrder) {
+        List<ListOrder> list = findAllListOrder();
+        list.add(newListOrder);
+        CSVUtil.write(Path,list);
     }
 
     @Override
     public void update(int idOrder, double price, double grandTotal) {
-
+        List<ListOrder> list = findAllListOrder();
+        for (ListOrder listOrder : list){
+            if (listOrder.getIdListOrder() == idOrder){
+                if (listOrder.getPrice() == price){
+                    listOrder.setGrandTotal(grandTotal);
+                    CSVUtil.write(Path,list);
+                    break;
+                }
+            }
+        }
     }
 
     @Override
     public ListOrder getListOrderById(int id) {
+        List<ListOrder> list = findAllListOrder();
+        for (ListOrder listOrder : list){
+            if (listOrder.getIdListOrder() == id){
+                return listOrder;
+            }
+        }
         return null;
     }
 }
