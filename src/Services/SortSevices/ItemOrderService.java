@@ -8,6 +8,17 @@ import java.util.List;
 
 public class ItemOrderService implements SuperListOrderService{
     private final static String Path = "D:\\CaseStudyModule2\\data\\ListOrder.csv";
+    private static ItemOrderService instanceListOrder;
+
+    public ItemOrderService(){}
+
+    public static ItemOrderService instanceListOrder(){
+        if (instanceListOrder == null){
+            instanceListOrder = new ItemOrderService();
+        }
+        return instanceListOrder;
+    }
+
 
 
     @Override

@@ -12,6 +12,6 @@ public class InstantUtil {
     public static String amountProduct(double value){
         String patternVND = "###";
         DecimalFormat decimalFormat = new DecimalFormat(patternVND);
-        return decimalFormat.format(patternVND);
+        return decimalFormat.format(value);
     }
 }

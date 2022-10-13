@@ -1,26 +1,31 @@
 package src.RawInfo;
 
+import java.time.Instant;
+
 public class Order {
-    private int idOrder;
+    private long idOrder;
     private String fullName;
     private String mobile;
     private double grandTotal;
 
+    private Instant timeCreateOrder;
+
     public Order() {
     }
 
-    public Order(int idOrder, String fullName, String mobile, double grandeTotal) {
+    public Order(long idOrder, String fullName, String mobile, double grandTotal, Instant timeCreateOrder) {
         this.idOrder = idOrder;
         this.fullName = fullName;
         this.mobile = mobile;
-        this.grandTotal = grandeTotal;
+        this.grandTotal = grandTotal;
+        this.timeCreateOrder = timeCreateOrder;
     }
 
-    public int getIdOrder() {
+    public long getIdOrder() {
         return idOrder;
     }
 
-    public void setIdOrder(int idOrder) {
+    public void setIdOrder(long idOrder) {
         this.idOrder = idOrder;
     }
 
@@ -48,18 +53,27 @@ public class Order {
         this.grandTotal = grandTotal;
     }
 
-    @Override
-    public String toString() {
-        return String.format("%s,%s,%s,%s",idOrder,fullName,mobile,grandTotal);
+    public Instant getTimeCreateOrder() {
+        return timeCreateOrder;
     }
 
-    public static Order parseinOrder(String myOrder){
+    public void setTimeCreateOrder(Instant timeCreateOrder) {
+        this.timeCreateOrder = timeCreateOrder;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s,%s,%s,%s,%s",idOrder,fullName,mobile,grandTotal,timeCreateOrder);
+    }
+
+    public static Order parseOrder(String myOrder){
         Order order =new Order();
         String[] array = myOrder.split(",");
-        order.setIdOrder(Integer.parseInt(array[0]));
+        order.setIdOrder(Long.parseLong(array[0]));
         order.setFullName(array[1]);
         order.setMobile(array[2]);
         order.setGrandTotal(Double.parseDouble(array[3]));
+        order.setTimeCreateOrder(Instant.parse(array[4]));
         return order;
     }
 }
