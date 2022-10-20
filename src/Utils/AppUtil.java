@@ -25,12 +25,23 @@ public class AppUtil {
         }while (true);
         return option;
     }
-
     public static int retryParseInt(){
         int result;
         do{
+            try {
+                result = Integer.parseInt((scanner.nextLine()));
+                return result;
+            }catch (Exception e){
+                System.out.println("Syntax Error!, Retry Input");
+                System.out.print("->  ");
+            }
+        }while (true);
+    }
+    public static long retryParseLong(){
+        long result;
+        do{
             try{
-                result = Integer.parseInt(scanner.nextLine());
+                result = Long.parseLong( scanner.nextLine());
                 return result;
             }catch (Exception e){
                 System.out.println("Syntax Error!, Retry Input");
@@ -48,7 +59,7 @@ public class AppUtil {
         return result;
     }
 
-    public static double parseDouble(){
+    public static double retryParseDouble(){
         double result;
         do {
             try {

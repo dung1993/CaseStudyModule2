@@ -30,8 +30,8 @@ public class UserService implements SuperUserService{
     public User loginUser(String username, String password) {
         List<User> users = findAllUsers();
         for (User user: users) {
-            if (user.getUsername().equals(username) && user.getPassword().equals(password));
-            return user;
+            if (user.getUsername().equals(username) && user.getPassword().equals(password))
+                return user;
         }
         return null;
     }
@@ -44,9 +44,9 @@ public class UserService implements SuperUserService{
     }
 
     @Override
-    public void removeUser(long idUser) {
+    public void removeUser(Long idUser) {
         List<User> users = findAllUsers();
-        users.removeIf(id -> id.getIdUser() == idUser);
+        users.removeIf(id -> id.getIdUser().equals(idUser));
         CSVUtil.write(Path,users);
     }
 
@@ -71,10 +71,10 @@ public class UserService implements SuperUserService{
     }
 
     @Override
-    public User findIdUser(long idUser) {
+    public User findIdUser(Long idUser) {
         List<User> users = findAllUsers();
         for (User user: users) {
-            if (user.getIdUser() == idUser){
+            if (user.getIdUser().equals(idUser) ){
                 return user;
             }
         }
@@ -82,7 +82,7 @@ public class UserService implements SuperUserService{
     }
 
     @Override
-    public boolean exitsUser(long idUser) {
+    public boolean exitsUser(Long idUser) {
         return findIdUser(idUser) != null;
     }
 

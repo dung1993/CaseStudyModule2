@@ -3,7 +3,7 @@ package src.RawInfo;
 import java.time.Instant;
 
 public class Order {
-    private long idOrder;
+    private Long idOrder;
     private String fullName;
     private String mobile;
     private double grandTotal;
@@ -13,7 +13,14 @@ public class Order {
     public Order() {
     }
 
-    public Order(long idOrder, String fullName, String mobile, double grandTotal, Instant timeCreateOrder) {
+    public Order(Long idOrder, String fullName, String mobile, Instant timeCreateOrder) {
+        this.idOrder = idOrder;
+        this.fullName = fullName;
+        this.mobile = mobile;
+        this.timeCreateOrder = timeCreateOrder;
+    }
+
+    public Order(Long idOrder, String fullName, String mobile, double grandTotal, Instant timeCreateOrder) {
         this.idOrder = idOrder;
         this.fullName = fullName;
         this.mobile = mobile;
@@ -21,7 +28,7 @@ public class Order {
         this.timeCreateOrder = timeCreateOrder;
     }
 
-    public long getIdOrder() {
+    public Long getIdOrder() {
         return idOrder;
     }
 

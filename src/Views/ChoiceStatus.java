@@ -1,2 +1,5 @@
-package src.Views;public class ChoiceStatus {
+package src.Views;
+
+public enum ChoiceStatus {
+    ADD,EDIT,REMOVE,SHOW
 }

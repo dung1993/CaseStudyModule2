@@ -11,13 +11,13 @@ public interface SuperProductService {
 
     void editProduct(Product newProduct);
 
-    void removeProduct(long idProduct);
+    void removeProduct(Long idProduct);
 
     List<Product> findProductByNameProduct(String name);
 
-    boolean exitsById(long idProduct);
+    boolean exitsById(Long idProduct);
 
-    Product checkId(long idProduct);
+    Product checkId(Long idProduct);
 
-    void updateAmount(long idProduct, int amount);
+    void updateAmount(Long idProduct, int amount);
 }

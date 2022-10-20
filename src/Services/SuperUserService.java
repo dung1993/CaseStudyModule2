@@ -11,13 +11,13 @@ public interface SuperUserService {
 
     void addUser(User newUser);
 
-    void removeUser(long idUser);
+    void removeUser(Long idUser);
 
     void editUser(User newUser);
 
-    User findIdUser(long idUser);
+    User findIdUser(Long idUser);
 
-    boolean exitsUser(long idUser);
+    boolean exitsUser(Long idUser);
 
     boolean exitsUserName(String username);
 

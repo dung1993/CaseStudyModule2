@@ -9,15 +9,15 @@ import java.util.List;
 
 public class OrderService implements SuperOrderService{
     public final static String Path = "D:\\CaseStudyModule2\\data\\Order.csv";
-    private static OrderService requireOrder;
+    private static OrderService instanceOrder;
 
     public OrderService(){}
 
-    public static OrderService getRequireOrder(){
-        if (requireOrder == null){
-            requireOrder = new OrderService();
+    public static OrderService getInstanceOrder(){
+        if (instanceOrder == null){
+            instanceOrder = new OrderService();
         }
-        return requireOrder;
+        return instanceOrder;
     }
 
     public List<Order> findAllOrder(){

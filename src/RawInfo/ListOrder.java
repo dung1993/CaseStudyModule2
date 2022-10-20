@@ -1,19 +1,24 @@
 package src.RawInfo;
 
-public class ListOrder {
-    private int idListOrder;
+import java.util.List;
+
+public class ListOrder  {
+    private Long idListOrder;
+
+    private Long idOrder;
     private double price;
     private int amount;
-    private int idProduct;
+    private Long idProduct;
     private String nameProduct;
     private double total;
     private double grandTotal;
-    private int idOrder;
+
 
     public ListOrder() {
     }
 
-    public ListOrder(int idListOrder, double price, int amount, int idProduct, String nameProduct, double total, double grandTotal, int idOrder) {
+
+    public ListOrder(Long idListOrder, double price, int amount, Long idProduct, String nameProduct, double total, double grandTotal, Long idOrder) {
         this.idListOrder = idListOrder;
         this.price = price;
         this.amount = amount;
@@ -24,11 +29,21 @@ public class ListOrder {
         this.idOrder = idOrder;
     }
 
-    public int getIdListOrder() {
+    public ListOrder(Long idOrder, double price, int amount, Long idProduct, String nameProduct, double total, double grandTotal) {
+        this.idOrder = idOrder;
+        this.price = price;
+        this.amount = amount;
+        this.idProduct = idProduct;
+        this.nameProduct = nameProduct;
+        this.total = total;
+        this.grandTotal = grandTotal;
+    }
+
+    public Long getIdListOrder() {
         return idListOrder;
     }
 
-    public void setIdListOrder(int idListOrder) {
+    public void setIdListOrder(Long idListOrder) {
         this.idListOrder = idListOrder;
     }
 
@@ -48,11 +63,11 @@ public class ListOrder {
         this.amount = amount;
     }
 
-    public int getIdProduct() {
+    public Long getIdProduct() {
         return idProduct;
     }
 
-    public void setIdProduct(int idProduct) {
+    public void setIdProduct(Long idProduct) {
         this.idProduct = idProduct;
     }
 
@@ -80,11 +95,11 @@ public class ListOrder {
         this.grandTotal = grandTotal;
     }
 
-    public int getIdOrder() {
+    public Long getIdOrder() {
         return idOrder;
     }
 
-    public void setIdOrder(int idOrder) {
+    public void setIdOrder(Long idOrder) {
         this.idOrder = idOrder;
     }
 
@@ -105,15 +120,19 @@ public class ListOrder {
     public static ListOrder parseListOrder(String myListOrder){
         ListOrder listOrder = new ListOrder();
         String[] array = myListOrder.split(",");
+        //1666097202,7000000.0,2,1666086186,Screen Samsung sm1000,1.4E7,0.0,1666097156
 
-        listOrder.setIdListOrder(Integer.parseInt(array[0]));
+        listOrder.setIdListOrder(Long.parseLong(array[0]));
         listOrder.setPrice(Double.parseDouble(array[1]));
         listOrder.setAmount(Integer.parseInt(array[2]));
-        listOrder.setIdProduct(Integer.parseInt(array[3]));
+        listOrder.setIdProduct(Long.parseLong(array[3]));
+
         listOrder.setNameProduct(array[4]);
         listOrder.setTotal(Double.parseDouble(array[5]));
         listOrder.setGrandTotal(Double.parseDouble(array[6]));
-        listOrder.setIdOrder(Integer.parseInt(array[7]));
+        listOrder.setIdOrder(Long.parseLong(array[7]));
+
+
 
         return listOrder;
     }

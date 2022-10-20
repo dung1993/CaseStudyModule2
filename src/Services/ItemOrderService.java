@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemOrderService implements SuperListOrderService{
-    private final static String Path = "D:\\CaseStudyModule2\\data\\ListOrder.csv";
+    private final static String Path = "data\\ListOrder.csv";
     private static ItemOrderService instanceListOrder;
 
     public ItemOrderService(){}
 
-    public static ItemOrderService instanceListOrder(){
+    public static ItemOrderService getInstanceListOrder(){
         if (instanceListOrder == null){
             instanceListOrder = new ItemOrderService();
         }
@@ -38,11 +38,13 @@ public class ItemOrderService implements SuperListOrderService{
         CSVUtil.write(Path,list);
     }
 
+
+
     @Override
-    public void update(int idOrder, double price, double grandTotal) {
+    public void update(Long idOrder, double price, double grandTotal) {
         List<ListOrder> list = findAllListOrder();
         for (ListOrder listOrder : list){
-            if (listOrder.getIdListOrder() == idOrder){
+            if (listOrder.getIdListOrder().equals(idOrder)){
                 if (listOrder.getPrice() == price){
                     listOrder.setGrandTotal(grandTotal);
                     CSVUtil.write(Path,list);
@@ -53,10 +55,10 @@ public class ItemOrderService implements SuperListOrderService{
     }
 
     @Override
-    public ListOrder getListOrderById(int id) {
+    public ListOrder getListOrderById(long id) {
         List<ListOrder> list = findAllListOrder();
         for (ListOrder listOrder : list){
-            if (listOrder.getIdListOrder() == id){
+            if (listOrder.getIdListOrder().equals(id)){
                 return listOrder;
             }
         }

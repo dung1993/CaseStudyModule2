@@ -1,7 +1,7 @@
 package src.RawInfo;
 
 public class User {
-    private int idUser;
+    private Long idUser;
     private String username;
     private String password;
     private String phoneNumber;
@@ -11,7 +11,7 @@ public class User {
     public User() {
     }
 
-    public User(int idUser, String username, String password, String phoneNumber, String role) {
+    public User(Long idUser, String username, String password, String phoneNumber, String role) {
         this.idUser = idUser;
         this.username = username;
         this.password = password;
@@ -19,11 +19,13 @@ public class User {
         this.role = role;
     }
 
-    public int getIdUser() {
+
+
+    public Long getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(int idUser) {
+    public void setIdUser(Long idUser) {
         this.idUser = idUser;
     }
 
@@ -67,7 +69,7 @@ public class User {
     public static User parseUser(String myUser){
         String[] array = myUser.split(",");
         User user = new User();
-        user.setIdUser(Integer.parseInt(array[0]));
+        user.setIdUser(Long.parseLong(array[0]));
         user.setUsername(array[1]);
         user.setPassword(array[2]);
         user.setPhoneNumber(array[3]);

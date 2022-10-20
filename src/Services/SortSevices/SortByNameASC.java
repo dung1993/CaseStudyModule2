@@ -4,7 +4,7 @@ import src.RawInfo.Product;
 
 import java.util.Comparator;
 
-public class SoftByNameASC implements Comparator<Product> {
+public class SortByNameASC implements Comparator<Product> {
 
     @Override
     public int compare(Product o1, Product o2) {
