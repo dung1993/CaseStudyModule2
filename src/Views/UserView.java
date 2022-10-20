@@ -295,10 +295,10 @@ public class UserView {
     public static void showUserList() {
         System.out.println();
         System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚List⟚User⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-        System.out.printf("⥘⥘%-15s %-15s %-25s %-25s -15s ⥘⥘\n", "ID", "Username", "Password", "Phone Number", "Role");
+        System.out.printf("⥘⥘%-15s %-15s %-25s %-25s %-15s ⥘⥘\n", "ID", "Username", "Password", "Phone Number", "Role");
         System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
         for (User user : userService.findAllUsers()) {
-            System.out.printf("⥘⥘%-15s %-15s %-25s %-25s -15s ⥘⥘\n",
+            System.out.printf("⥘⥘%-15s %-15s %-25s %-25s %-15s ⥘⥘\n",
                     user.getIdUser(),
                     user.getUsername(),
                     user.getPassword(),

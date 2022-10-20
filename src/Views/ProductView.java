@@ -262,7 +262,7 @@ public class ProductView {
         System.out.printf("⥘⥘%-20s %-25s %-20s %-20s⥘⥘\n", "IdProduct", "NameProduct", "Price", "Amount");
         System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
         for (Product product : productService.findAllProducts()) {
-            System.out.printf("%-20s %-25s %-20s %-20s\n",
+            System.out.printf("⥘⥘%-20s %-25s %-20s %-20s⥘⥘\n",
                     product.getIdProduct(),
                     product.getNameProduct(),
                     InstantUtil.doubleToVND(product.getPrice()),
@@ -339,10 +339,10 @@ public class ProductView {
         if (products.size() != 0) {
             System.out.println();
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚Name⟚Product⟚You⟚Need⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-            System.out.printf("%-25s %-20s %-20s %-20s\n", "IdProduct", "NameProduct", "Price", "Amount");
+            System.out.printf("%⥘⥘-25s %-20s %-20s %-20s⥘⥘\n", "IdProduct", "NameProduct", "Price", "Amount");
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             for (Product product : products) {
-                System.out.printf("%-25s %-20s %-20s %-20s\n",
+                System.out.printf("⥘⥘%-25s %-20s %-20s %-20s⥘⥘\n",
                         product.getIdProduct(),
                         product.getNameProduct(),
                         InstantUtil.doubleToVND(product.getPrice()),
@@ -358,9 +358,9 @@ public class ProductView {
         } else {
             System.out.println();
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚Name⟚Product⟚You⟚Need⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-            System.out.printf("%-25s %-20s %-20s %-20s\n", "IdProduct", "NameProduct", "Price", "Amount");
+            System.out.printf("⥘⥘%-25s %-20s %-20s %-20s⥘⥘\n", "IdProduct", "NameProduct", "Price", "Amount");
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-            System.out.printf("%60s", "Product not found!!!\n");
+            System.out.printf("⥘⥘%60s⥘⥘", "Product not found!!!\n");
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             int choice;
             do {
@@ -380,9 +380,9 @@ public class ProductView {
         if (product != null) {
             System.out.println();
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚Name⟚Product⟚You⟚Need⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-            System.out.printf("%-25s %-20s %-20s %-20s\n", "IdProduct", "NameProduct", "Price", "Amount");
+            System.out.printf("⥘⥘%-25s %-20s %-20s %-20s⥘⥘\n", "IdProduct", "NameProduct", "Price", "Amount");
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-            System.out.printf("%-25s %-20s %-20s %-20s\n",
+            System.out.printf("⥘⥘%-25s %-20s %-20s %-20s⥘⥘\n",
                     product.getIdProduct(),
                     product.getNameProduct(),
                     InstantUtil.doubleToVND(product.getPrice()),
@@ -397,9 +397,9 @@ public class ProductView {
         } else {
             System.out.println();
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚Name⟚Product⟚You⟚Need⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-            System.out.printf("%-25s %-20s %-20s %-20s\n", "IdProduct", "NameProduct", "Price", "Amount");
+            System.out.printf("⥘⥘%-25s %-20s %-20s %-20s⥘⥘\n", "IdProduct", "NameProduct", "Price", "Amount");
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
-            System.out.printf("%60s", "Product not found!!!\n");
+            System.out.printf("⥘⥘%60s⥘⥘", "Product not found!!!\n");
             System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             int choice;
             do {
