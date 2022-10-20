@@ -37,7 +37,7 @@ public class Menu {
                     case "2":
                         UserView.signIn();
                         break;
-                    case "3":
+                    case "0":
                         AppUtil.exit();
                         break;
                     default:
