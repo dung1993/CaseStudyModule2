@@ -142,7 +142,7 @@ public class OrderView {
                 }
                 Product product = productService.checkId(idProduct);
                 double price = product.getPrice();
-                System.out.println("Input amount of product you need by:");
+                System.out.println("Input amount you need by:");
                 System.out.print("==>  ");
                 int amount = Integer.parseInt(scanner.nextLine());
                 while (!checkAmountProduct(product, amount)){
