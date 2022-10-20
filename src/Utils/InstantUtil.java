@@ -18,7 +18,7 @@ public class InstantUtil {
     }
 
     public static String doubleToVND(double value){
-        String patternVND = "###";
+        String patternVND = ",### VNĐ";
         DecimalFormat decimalFormat = new DecimalFormat(patternVND);
         return decimalFormat.format(value);
     }
