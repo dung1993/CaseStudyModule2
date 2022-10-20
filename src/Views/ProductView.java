@@ -154,14 +154,14 @@ public class ProductView {
             if (productService.exitsById(id)) {
                 boolean flagUpdate = true;
                 System.out.println();
-                System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+                System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
                 System.out.println("⥘⥘              ⤿Edit Product⤾              ⥘⥘");
-                System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+                System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
                 System.out.println("⥘⥘             1. Edit Product Name         ⥘⥘");
                 System.out.println("⥘⥘             2. Edit Product Price        ⥘⥘");
                 System.out.println("⥘⥘             3. Edit Product Amount       ⥘⥘");
                 System.out.println("⥘⥘             4. Return                    ⥘⥘");
-                System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+                System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
                 System.out.println("Select your choice:");
                 System.out.print("==>  ");
                 Product newProduct = new Product();
@@ -226,12 +226,12 @@ public class ProductView {
             showProductList();
             Long id = inputIdProduct(ChoiceStatus.REMOVE);
             System.out.println();
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             System.out.println("⥘⥘              ⤿Delete Product⤾            ⥘⥘");
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             System.out.println("⥘⥘                    1. Yes                ⥘⥘");
             System.out.println("⥘⥘                    2. Return             ⥘⥘");
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             System.out.println("Select your choice:");
             System.out.print("==>  ");
             do {
@@ -297,13 +297,13 @@ public class ProductView {
             boolean flag = true;
             String choice;
             System.out.println();
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             System.out.println("⥘⥘                 ⤿Find Product⤾           ⥘⥘");
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             System.out.println("⥘⥘           1. Find by name product        ⥘⥘");
             System.out.println("⥘⥘           2. Find by id product          ⥘⥘");
             System.out.println("⥘⥘           0. Return                      ⥘⥘");
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             System.out.println("Select your choice:");
             System.out.print("==>  ");
             do {
@@ -338,9 +338,9 @@ public class ProductView {
         List<Product> products = productService.findProductByNameProduct(name);
         if (products.size() != 0) {
             System.out.println();
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚Name⟚Product⟚You⟚Need⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚Name⟚Product⟚You⟚Need⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             System.out.printf("%-25s %-20s %-20s %-20s\n", "IdProduct", "NameProduct", "Price", "Amount");
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             for (Product product : products) {
                 System.out.printf("%-25s %-20s %-20s %-20s\n",
                         product.getIdProduct(),
@@ -348,7 +348,7 @@ public class ProductView {
                         InstantUtil.doubleToVND(product.getPrice()),
                         InstantUtil.amountProduct(product.getAmount()));
             }
-            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
+            System.out.println("⥘⥘⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⟚⥘⥘");
             int choice;
             do {
                 System.out.println("Press 0 if you need return productManager");
